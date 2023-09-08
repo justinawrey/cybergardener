@@ -13,9 +13,14 @@ async function subscribe(email) {
     Accept: "application/json",
   };
 
+  let data = {
+    email,
+  };
+
   return fetch(url, {
-    method: "GET",
+    method: "POST",
     headers,
+    body: JSON.stringify(data),
   });
 }
 
@@ -36,8 +41,9 @@ export async function POST({ request }) {
     });
   }
 
-  let body = await res.json();
-  console.log(body);
+  // log the response from sender
+  let json = await res.json();
+  console.log(json);
 
   // otherwise we good yo
   return new Response({
