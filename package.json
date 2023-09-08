@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@astrojs/deno": "^5.0.0",
+    "@astrojs/solid-js": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.0.10",
+    "solid-js": "^1.4.3",
     "tailwindcss": "^3.0.24"
   },
   "packageManager": "pnpm@7.9.1",

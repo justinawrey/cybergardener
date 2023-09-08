@@ -1,7 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Subscribe from "../components/Subscribe.jsx";
 ---
 
 <Layout title="cyber_gardener">
-  <main>hello, cyber gardener</main>
+  <main class="space-y-10 flex flex-col items-center justify-center">
+    <p>
+      hello, cyber gardener
+    </p>
+    <Subscribe client:load />
+    <p>contact: contact@blueoystergames.com</p>
+  </main>
 </Layout>
