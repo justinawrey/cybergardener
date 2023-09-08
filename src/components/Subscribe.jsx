@@ -1,7 +1,8 @@
 function subscribe() {
-  let senderKey = import.meta.env.prod
-    ? // @ts-ignore
-      Deno.env.get("PUBLIC_SENDER_API_KEY")
+  const isDenoDeploy = Deno.env.get("DENO_DEPLOYMENT_ID") !== undefined;
+
+  let senderKey = isDenoDeploy
+    ? Deno.env.get("PUBLIC_SENDER_API_KEY")
     : import.meta.env.PUBLIC_SENDER_API_KEY;
 
   const url = new URL("https://api.sender.net/v2/subscribers");
