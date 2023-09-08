@@ -36,6 +36,9 @@ export async function POST({ request }) {
     });
   }
 
+  let body = await res.json();
+  console.log(body);
+
   // otherwise we good yo
   return new Response({
     status: 200,
