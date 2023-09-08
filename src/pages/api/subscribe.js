@@ -36,7 +36,7 @@ export async function POST({ request }) {
     });
   }
 
-  // otherwise we good
+  // otherwise we good yo
   return new Response({
     status: 200,
   });
